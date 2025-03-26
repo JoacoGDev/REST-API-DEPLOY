@@ -1,8 +1,8 @@
 const express = require('express');
 const crypto = require('node:crypto')
 const z = require('zod')
-const movies = require('./movies.json')
-const { validateMovie, validatePartialMovie } = require('./schema/movies')
+const movies = require('../movies.json')
+const { validateMovie, validatePartialMovie } = require('../schema/movies')
 
 
 
@@ -92,3 +92,5 @@ app.listen(PORT, () => {
     console.log(`server listening on port http://localhost:${PORT}`)
 })
 
+
+module.exports = app
